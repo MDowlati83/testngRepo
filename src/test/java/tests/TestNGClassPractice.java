@@ -1,9 +1,15 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestNGClassPractice {
+	@BeforeMethod
+	public void beforeMethod() {
+		System.out.println("this method will execute before each test");
+	}
 	@Test(priority = 5)
 	public void testOne() {
 		System.out.println("this is test One");
@@ -22,7 +28,7 @@ public class TestNGClassPractice {
 	@Test (priority = 1 )
 	public void testFour() {
 		System.out.println("this is test Four");
-		String actual = "TEK school";
+		String actual = "TEK school of America";
 		String expected = "TEK school of America";
 		Assert.assertEquals(expected, actual);
 
@@ -32,8 +38,13 @@ public class TestNGClassPractice {
 		System.out.println("this is test Five");
 		System.out.println("this method depends on succsessfull execution of  testNumber Four");
 		
-		
+		}
+	
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("this method will execute after each test");
 	}
+	
 	
 
 }

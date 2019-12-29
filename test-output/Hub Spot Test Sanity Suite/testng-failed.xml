@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [Hub Spot Test Sanity Suite]">
+  <test thread-count="5" verbose="3" name="hub spot Sanity Test(failed)">
+    <parameter name="zipcode" value="22304"/>
+    <parameter name="password" value="SDET2020"/>
+    <parameter name="address" value="Falls Church VA"/>
+    <parameter name="city" value="falls Church"/>
+    <parameter name="state" value="VA"/>
+    <parameter name="userName" value="TEKSCHOOL"/>
+    <parameter name="url" value="www.google.com"/>
+    <classes>
+      <class name="tests.TestEnvironment">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testEnvironmentLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.TestEnvironment -->
+    </classes>
+  </test> <!-- hub spot Sanity Test(failed) -->
+</suite> <!-- Failed suite [Hub Spot Test Sanity Suite] -->

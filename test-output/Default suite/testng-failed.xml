@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TestNGClassPractice">
+      <class name="tests.TestEnvironment">
         <methods>
-          <include name="testFour"/>
-          <include name="testFive"/>
+          <include name="beforeMethod"/>
+          <include name="testEnvironmentLogin" invocation-numbers="0"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.TestNGClassPractice -->
+      </class> <!-- tests.TestEnvironment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
